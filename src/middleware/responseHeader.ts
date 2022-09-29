@@ -1,5 +1,3 @@
-// middleware/responseHeader.ts
-
 import { Request, Response, NextFunction } from "express";
 
 const responseHeader = (req: Request, res: Response, next: NextFunction) => {

@@ -1,9 +1,9 @@
 import express, { Express } from "express";
-import responseHeader from "./responseHeader";
+import responseHeader from "./responseHeader"; // 请求头
 
-function initMiddleware(app: Express) {
+const initMiddleware = (app: Express) => {
 	app.use(express.json());
 	app.use(responseHeader);
-}
+};
 
 export default initMiddleware;

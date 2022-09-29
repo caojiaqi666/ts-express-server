@@ -1,16 +1,19 @@
-// src/app.ts
-
 import express from "express";
-import routes from "./routes"; // 路由
+import routes from "./routes";
+import logger from "./utils/logger";
+import config from "./config/default";
+import initMiddleware from "./middleware";
 
 const app = express();
 
-app.use(express.json());
+// 挂载中间件
+initMiddleware(app);
 
-const PORT = 9527;
+const { port } = config;
 
 // 启动
-app.listen(PORT, async () => {
-	console.log(`App is running at http://localhost:${PORT}`);
+app.listen(port, async () => {
+	console.log(`App 当前运行在 ${port} 端口`);
+	logger.info(`App 当前运行在 ${port} 端口`);
 	routes(app);
 });

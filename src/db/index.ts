@@ -13,7 +13,7 @@ const db = mongoose.createConnection(DBURL, {
 
 // 数据库连接成功，触发open事件
 db.on("open", () => {
-	logger.info("数据库连接成功", DBURL);
+	logger.info("数据库连接成功q", DBURL);
 });
 
 db.on("error", (err: any) => {

@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm run rewrite && pnpm run lint:lint-staged
+pnpm run rewrite && git add . && pnpm run lint:lint-staged

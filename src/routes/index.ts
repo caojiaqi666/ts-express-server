@@ -13,9 +13,8 @@ interface RouterConf {
 // const routerConf: Array<RouterConf> = [];
 
 const routes = (app: Express) => {
-	// 根目录
 	app.get("/", (req: Request, res: Response) => {
-		commonRes(res, { word: "Hello Shinp!!!" });
+		commonRes(res, { word: "Hello Server!!!" });
 	});
 
 	app.post("/login", (req: Request, res: Response) => {

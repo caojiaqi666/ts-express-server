@@ -1,8 +1,8 @@
 // 枚举状态码 根据自己需要定义
 enum Code {
-	success = 3000,
-	denied,
-	error
+	success = 200,
+	denied = 210,
+	error = 500
 }
 
 enum CodeMessage {

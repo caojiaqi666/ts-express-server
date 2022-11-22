@@ -1,4 +1,5 @@
 const { Schema } = require("../db");
+import { HOST } from "../config/default";
 
 const UserSchema = new Schema(
 	{
@@ -13,7 +14,7 @@ const UserSchema = new Schema(
 		avatar: {
 			type: String,
 			required: true,
-			default: `http://localhost:9527/avatar/default.png`
+			default: `${HOST}/avatar/default.png`
 		},
 		email: {
 			type: String,

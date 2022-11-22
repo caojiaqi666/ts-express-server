@@ -13,8 +13,7 @@ import initMiddleware from "./middleware";
 
 const app = express();
 
-// app.use(express.static(__dirname + "/public"));
-// console.log('__dirname + "/public": ', __dirname + "/public");
+app.use(express.static("public"));
 
 // 挂载中间件
 initMiddleware(app);

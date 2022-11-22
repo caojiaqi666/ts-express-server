@@ -1,3 +1,10 @@
+/*
+ * @Author: anjiang
+ * @Date: 2022-09-29
+ * @LastEditors: anjiang
+ * @LastEditTime: 2022-11-22
+ * @Description:
+ */
 import express from "express";
 import routes from "./routes";
 import logger from "./utils/logger";
@@ -5,6 +12,9 @@ import { PORT } from "./config/default";
 import initMiddleware from "./middleware";
 
 const app = express();
+
+// app.use(express.static(__dirname + "/public"));
+// console.log('__dirname + "/public": ', __dirname + "/public");
 
 // 挂载中间件
 initMiddleware(app);

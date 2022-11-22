@@ -1,6 +1,6 @@
 import { Express, Request, Response, Router } from "express";
 import commonRes from "../utils/commonRes";
-const { login } = require("../Model/user");
+const User = require("../control/user/index");
 
 // 路由配置接口
 interface RouterConf {
@@ -17,9 +17,7 @@ const routes = (app: Express) => {
 		commonRes(res, { word: "Hello Server!!!" });
 	});
 
-	app.post("/login", (req: Request, res: Response) => {
-		commonRes(res, { word: "Hello Shinp77777!!!" });
-	});
+	app.post("/login", User.login);
 };
 
 export default routes;

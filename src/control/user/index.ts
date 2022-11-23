@@ -1,4 +1,4 @@
-const userModel = require("../Model");
+const userModel = require("../../Model/user");
 
 const login = async (ctx: any) => {
 	const { username, passwd } = ctx.request.body;
